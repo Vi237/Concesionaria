@@ -6,17 +6,19 @@ public class Coche {
     private String marca;
     private String modelo;
     private String color;
-    private double precio;
+    private Double precio;
     //FK
-    Cliente cliente;
+    private Cliente cliente;
+    public Coche(){
 
-    public Coche(String matricula, String marca, String modelo, String color, double precio, Cliente cliente) {
+    }
+    public Coche(String matricula, String marca, String modelo, String color, Double precio, Cliente cliente) {
         this.setMatricula(matricula);
         this.setMarca(marca);
         this.setModelo(modelo);
         this.setColor(color);
         this.setPrecio(precio);
-        this.cliente = cliente;
+        this.setCliente(cliente);
     }
 
     public String getMatricula() {
@@ -51,12 +53,20 @@ public class Coche {
         this.color = color;
     }
 
-    public double getPrecio() {
+    public Double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(Double precio) {
         this.precio = precio;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     @Override

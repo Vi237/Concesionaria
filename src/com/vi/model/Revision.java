@@ -8,7 +8,9 @@ public class Revision {
     private String frenos;
     //FK
     private Coche coche;
+    public Revision(){
 
+    }
     public Revision(String codigo, String filtro, String aceite, String frenos, Coche coche) {
         this.setCodigo(codigo);
         this.setFiltro(filtro);
